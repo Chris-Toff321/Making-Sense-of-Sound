@@ -28,7 +28,7 @@ Original writing and illustrations are copyright © 2026 Xujian Wang. All rights
 - [EP4. Case Share: Decoding EV Powertrain Airborne and Structure-borne Contribution Based on TPA](https://www.linkedin.com/pulse/case-share-decoding-ev-powertrain-airborne-based-tpa-chris-wang-9os3c/?trackingId=B4e2ow8is8b%2BI65wzWgqPg%3D%3D)
 ### Phase 4 The Space: Applied Acoustic Systems and Lived Context
 #### 4.1 The Building and Room acoustics
-- [EP5,Airborne vs.Structure-Borne: How Do We Quantify by STC and IIC](https://www.linkedin.com/pulse/making-sense-sound-acoustics-nvh-airborne-vs-how-do-we-chris-wang-78pfc/?trackingId=%2FLRPLNG6Qvp7JM7mJ%2Fa4IA%3D%3D)
+- [EP5, Airborne vs.Structure-Borne: How Do We Quantify by STC and IIC](https://www.linkedin.com/pulse/making-sense-sound-acoustics-nvh-airborne-vs-how-do-we-chris-wang-78pfc/?trackingId=%2FLRPLNG6Qvp7JM7mJ%2Fa4IA%3D%3D)
 - [EP6.1, Lab vs. Field Measurements, Part 1: Why Airborne Sound Rating Change After Installation](https://www.linkedin.com/in/chris-w-7b297817b/recent-activity/all/)
 - [EP6.2, Lab vs. Field Measurements, Part2: Impact Sound—— The Installed Structure Matters Even More](https://www.linkedin.com/pulse/ep62-lab-vs-field-measurements-part-2-impact-soundthe-chris-wang-96rrc/?trackingId=Rh9jirHvC3rAVZCkn%2Fy6Jw%3D%3D)
 ## Case Shared:
