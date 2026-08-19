@@ -39,5 +39,7 @@ Original writing and illustrations are copyright © 2026 Xujian Wang. All rights
 - [The Acoustic Portrait of an Electric Compressor](https://www.linkedin.com/posts/activity-7467240611834765312-MY03?utm_source=share&utm_medium=member_desktop&rcm=ACoAACquDXYB7y4aAxPGFD2qoy9RMuqHkkyqtGY)
 - [When 45.6 dB(A) Is Still Disturbing](https://www.linkedin.com/posts/activity-7491436347426250752-IZxN?utm_source=share&utm_medium=member_desktop&rcm=ACoAACquDXYB7y4aAxPGFD2qoy9RMuqHkkyqtGY)
 
- **Ongoing series: New articles will be added regularly.** 
+ ## **Ongoing series: New articles will be added regularly.** 
  Follow me on LinkedIn: [Chris Wang](https://www.linkedin.com/in/chris-w-7b297817b/)
+
+ 
