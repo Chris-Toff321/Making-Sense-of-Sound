@@ -10,7 +10,7 @@ Together, they form a practical engineering sequence:
 >
 ## Author Background
 
-I am a senior acoustic engineer with 8+ years of experience across automotive, machinery and household appliances, specialising in acoustic measurement, signal analysis, structural dynamics and sound quality. This series extends that engineering perspective to building and environmental acoustics.
+I am a senior acoustic engineer with 8+ years of experience across automotive, machinery and household appliances, specialising in acoustic measurement, signal analysis, structural dynamics and sound quality. This series also extends that engineering perspective to building and environmental acoustics.
 
 ## Access and Copyright
 Making Sense of Sound is an independent, non-profit technical writing project. All articles are free to read and contain no advertising, sponsorship or paid promotion.
