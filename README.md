@@ -40,6 +40,7 @@ Original writing and illustrations are copyright © 2026 Xujian Wang. All rights
 - [Decoding EV Powertrain Airborne and Structure-borne Contributions Based on TPA](https://www.linkedin.com/pulse/case-share-decoding-ev-powertrain-airborne-based-tpa-chris-wang-9os3c/?trackingId=B4e2ow8is8b%2BI65wzWgqPg%3D%3D)
 - [The Acoustic Portrait of an Electric Compressor](https://www.linkedin.com/posts/activity-7467240611834765312-MY03?utm_source=share&utm_medium=member_desktop&rcm=ACoAACquDXYB7y4aAxPGFD2qoy9RMuqHkkyqtGY)
 - [When 45.6 dB(A) Is Still Disturbing](https://www.linkedin.com/posts/activity-7491436347426250752-IZxN?utm_source=share&utm_medium=member_desktop&rcm=ACoAACquDXYB7y4aAxPGFD2qoy9RMuqHkkyqtGY)
+- [EP100, Structure-borne Noise Root-Cause Analysis of HVAC — A Modular Heat-Exchange Unit for Hydronic Heating](https://www.linkedin.com/pulse/ep100-structure-borne-noise-root-cause-analysis-hvac-modular-wang-nginc/)
 
  ## **Ongoing series: New articles will be added regularly.** 
  Follow me on LinkedIn: [Chris Wang](https://www.linkedin.com/in/chris-w-7b297817b/)
