@@ -1,0 +1,256 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chris Wang's independent writing on acoustics, vibration and how people experience sound.">
+<title>Making Sense of Sound | Chris Wang</title>
+<meta name="site-version" content="3">
+<style>
+:root{color-scheme:light;--paper:#f6f7f2;--ink:#182c25;--muted:#4e6259;--accent:#14604a;--rule:#cbd7ce;--dark:#102b25;--mint:#c6f0d5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.7 system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:.22em}
+a:focus-visible{outline:3px solid #c76b25;outline-offset:5px}
+.wrap{max-width:83rem;margin:auto;padding-inline:clamp(1.2rem,5vw,4.5rem)}
+header{background:var(--dark);color:#f4f9f2}
+header a{color:inherit}
+.top{display:flex;justify-content:space-between;align-items:center;gap:.65rem 1.5rem;flex-wrap:wrap;padding-block:1.05rem;border-bottom:1px solid #517365}
+nav{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem}
+.top>a{font-weight:750;text-decoration:none}
+.top nav a{text-decoration:none;color:#d7e8df}
+.top nav a:hover{text-decoration:underline}
+.hero{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);gap:clamp(1.6rem,5vw,5.2rem);align-items:center;padding-block:clamp(3rem,8vw,7rem)}
+.hero h1{font:500 clamp(2.65rem,6.8vw,6.65rem)/.98 Georgia,serif;letter-spacing:-.055em;margin:0;max-width:11ch;text-wrap:balance}
+.hero p{color:#d1e6dc;max-width:39ch;margin:1.4rem 0}
+.hero .byline{font-size:.95rem;color:var(--mint)}
+.button{display:inline-block;background:var(--mint);color:var(--dark);padding:.64rem 1.05rem;border-radius:.26rem;font-weight:750;text-decoration:none}
+.button:hover{background:white}
+.waveform{min-width:0;margin:0;aspect-ratio:1.4;background:repeating-linear-gradient(to right,#9be5b319 0 1px,transparent 1px 12.5%),repeating-linear-gradient(to bottom,#9be5b319 0 1px,transparent 1px 20%),linear-gradient(150deg,#1f4337,#13342c);border:1px solid #547365;border-radius:.55rem;overflow:hidden}
+.waveform canvas{display:block;width:100%;height:100%}
+h2{font:500 clamp(1.9rem,4vw,3rem)/1.12 Georgia,serif;letter-spacing:-.025em;margin:0 0 1rem}
+h3{line-height:1.35}
+main>section{padding-block:clamp(2.4rem,5vw,4.4rem);border-bottom:1px solid var(--rule)}
+main.wrap{--text-columns:minmax(0,5fr) minmax(0,7fr);--column-gap:clamp(2rem,4.5vw,4rem);--section-space:clamp(2rem,4vw,3.25rem)}
+.author,.series-intro,.archive-note{display:grid;grid-template-columns:var(--text-columns);column-gap:var(--column-gap);align-items:start}
+.author{padding-block:var(--section-space);row-gap:.65rem}
+.author h2,.archive-note h2{margin:0}
+.author p{margin:0;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.card{display:flex;flex-direction:column;min-height:13rem;background:#fff;border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:.28rem;padding:clamp(1rem,2.5vw,1.7rem)}
+.card h3{margin:0;font:500 clamp(1.35rem,2.4vw,1.85rem)/1.12 Georgia,serif}
+.card p{margin:.65rem 0 1.1rem;color:var(--muted)}
+.card a{margin-top:auto;font-weight:650}
+.card:focus-within,.card:hover{border-color:var(--accent)}
+.series-intro{row-gap:clamp(1.5rem,3vw,2.5rem);padding-bottom:var(--section-space)}
+.intro-copy h2{margin-bottom:.8rem}
+.intro-copy p{margin:0;max-inline-size:46ch;font-size:clamp(1rem,1.18vw,1.125rem);line-height:1.65}
+.perspectives{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem clamp(1rem,2.5vw,2rem);list-style:none;padding:0;margin:0}
+.perspectives li{padding-top:.6rem;border-top:1px solid #a2b8a9}
+.perspectives strong{display:block;margin-bottom:.35rem;color:var(--accent);font:500 clamp(1.2rem,1.8vw,1.55rem)/1.15 Georgia,serif}
+.perspectives .description{display:block;line-height:1.5}
+.engineering-sequence{grid-column:1/-1;padding:1.05rem clamp(1rem,2vw,1.65rem) 1.2rem;border-inline-start:3px solid var(--accent);background:#e8efe8}
+.engineering-sequence p{margin:0 0 .7rem;color:var(--muted)}
+.sequence-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem 1.1rem;list-style:none;margin:0;padding:0}
+.sequence-steps li{display:flex;align-items:center;justify-content:space-between;gap:.5rem;font-weight:650;line-height:1.4}
+.sequence-arrow{flex:none;color:var(--accent)}
+.archive-note{row-gap:.75rem;padding-block:var(--section-space);border-top:1px solid var(--rule)}
+.note-copy>*{margin:0}
+.note-copy>*+*{margin-top:.75rem}
+.note-copy h3{font-size:1rem;line-height:1.5}
+.article-library{padding-top:var(--section-space);border-top:1px solid var(--rule)}
+.article-library>h2{margin-bottom:1.5rem}
+.index-layout{display:grid;grid-template-columns:minmax(12rem,.34fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,4rem);align-items:start}
+.index-nav{position:sticky;top:1.5rem;display:grid;gap:.2rem;border-left:2px solid var(--rule);padding-left:.85rem}
+.index-nav p{margin:0 0 .4rem;font-weight:700;color:var(--muted)}
+.index-nav a{padding:.36rem .4rem;line-height:1.4;text-decoration:none}
+.index-nav a:hover,.index-nav a:focus-visible{background:#e8efe8;text-decoration:underline}
+.index-entries{min-width:0}
+.phase{margin:0 0 1.15rem;border:1px solid var(--rule);border-radius:.4rem;background:#fff}
+.phase h3,.index-roadmap summary{font:500 clamp(1.15rem,2vw,1.48rem)/1.3 Georgia,serif}
+.phase h3{margin:0;padding:.85rem 1rem;background:#e8efe8;border-radius:.35rem .35rem 0 0}
+.phase ul,.phase ol{list-style:none;margin:0;padding:0 1rem}
+.phase li+li{border-top:1px solid #e4ebe5}
+.phase li a{display:block;padding:.64rem 0;line-height:1.5;text-decoration:none}
+.phase li a:hover,.phase li a:focus-visible{text-decoration:underline}
+.index-roadmap{margin:0 0 1.15rem;padding:.55rem .9rem;border:1px solid var(--rule);border-radius:.4rem;color:var(--muted)}
+.index-roadmap summary{cursor:pointer;padding:.22rem 0;color:var(--muted)}
+.index-roadmap .phase{margin:.25rem 0 0;border:0;background:transparent}
+.index-roadmap .phase h3{padding:.18rem 0;background:transparent;font:inherit}
+.index-entries>p{margin:.9rem 0 0;color:var(--muted)}
+.archive a{overflow-wrap:anywhere}
+[id]{scroll-margin-top:1.25rem}
+footer{padding-block:1.7rem;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:54rem){.index-layout{grid-template-columns:minmax(0,1fr);gap:1rem}.index-nav{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.index-nav p{grid-column:1/-1}main.wrap{--text-columns:minmax(0,1fr)}.intro-copy p{max-inline-size:66ch}.series-intro{row-gap:1.35rem}}
+@media(max-width:48rem){.hero{grid-template-columns:1fr}.waveform{aspect-ratio:2.6}.cards{grid-template-columns:1fr}.card{min-height:0}}
+@media(max-width:36rem){.perspectives{grid-template-columns:minmax(0,1fr);gap:1rem}.sequence-steps{display:block;list-style:decimal;padding-inline-start:1.4rem}.sequence-steps li{display:list-item;padding-inline-start:.25rem}.sequence-steps li+li{margin-top:.45rem}.sequence-steps li::marker{color:var(--accent)}.sequence-arrow{display:none}}
+</style></head>
+<body>
+<header><div class="wrap">
+  <div class="top"><a href="{{ '/' | relative_url }}">Making Sense of Sound</a><nav aria-label="Main navigation"><a href="#featured">Start here</a><a href="#article-index">Article Index</a><a href="#about">About</a></nav></div>
+  <div class="hero"><div class="hero-copy">
+    <h1>Making Sense of Sound</h1>
+    <p>Field notes on acoustics and vibration, from what we hear to how engineers measure and diagnose it.</p>
+    <p class="byline">Chris Wang · Acoustic &amp; Vibration Engineer</p>
+    <a class="button" href="#article-index">Browse articles</a>
+  </div><figure class="waveform" aria-hidden="true"><canvas></canvas></figure></div>
+</div></header>
+<main class="wrap">
+<section id="featured" hidden>
+  <h2>Start here</h2>
+  <div class="cards">
+    <article class="card" data-match="human-perception-20-20"><h3>How we hear</h3><p>Why the familiar 20 Hz–20 kHz range tells only part of the story.</p></article>
+    <article class="card" data-match="ep100-structure-borne-noise"><h3>Tracing structure-borne noise</h3><p>A practical investigation of a hydronic heat-exchange unit.</p></article>
+    <article class="card" data-match="ep801-what-does-world-sound-like"><h3>Listening to places</h3><p>An introduction to soundscape and how we experience an acoustic environment.</p></article>
+  </div>
+</section>
+<section class="author" id="about"><h2>About the author</h2><p>I’m Chris Wang, an acoustic and vibration engineer. I write about the measurement and diagnosis of sound and vibration across vehicles, machinery and buildings, and about how those sounds are experienced.</p></section>
+<section class="archive" aria-label="Series and article archive">
+<section class="series-intro" aria-labelledby="introduction">
+  <div class="intro-copy"><h2 id="introduction">Introduction</h2><p><em>Making Sense of Sound</em> is a technical writing series that connects these real-world experiences with acoustic and vibration engineering. Rather than treating individual metrics, methods and standards as separate topics, the series follows four connected perspectives:</p></div>
+  <ul class="perspectives" role="list" aria-label="Four perspectives">
+    <li><strong>The Receiver</strong> <span class="description">how people hear, perceive and respond to sound.</span></li>
+    <li><strong>The Path</strong> <span class="description">how acoustic and vibration energy propagates, couples and reaches the receiver.</span></li>
+    <li><strong>The Measurement</strong> <span class="description">how signals are captured, processed, interpreted and validated.</span></li>
+    <li><strong>The Space</strong> <span class="description">how rooms, buildings, outdoor environments and context shape the final experience.</span></li>
+  </ul>
+  <div class="engineering-sequence"><p>Together, they form a practical engineering sequence:</p><ol class="sequence-steps" role="list">
+    <li><span>Understand the experience</span> <span class="sequence-arrow" aria-hidden="true">→</span></li>
+    <li><span>trace the physical mechanism</span> <span class="sequence-arrow" aria-hidden="true">→</span></li>
+    <li><span>measure the evidence</span> <span class="sequence-arrow" aria-hidden="true">→</span></li>
+    <li><span>improve the system or space</span></li>
+  </ol></div>
+</section>
+<section class="archive-note" aria-labelledby="author-background"><h2 id="author-background">Author Background</h2><div class="note-copy"><p>I am a senior acoustic engineer with 8+ years of experience across automotive, machinery and household appliances, specialising in acoustic measurement, signal analysis, structural dynamics and sound quality. This series also extends that engineering perspective to building and environmental acoustics.</p></div></section>
+<section class="archive-note" aria-labelledby="access-and-copyright"><h2 id="access-and-copyright">Access and Copyright</h2><div class="note-copy">
+  <p>Making Sense of Sound is an independent, non-profit technical writing project. All articles are free to read and contain no advertising, sponsorship or paid promotion.</p>
+  <p>Original writing and illustrations are copyright © 2026 Xujian Wang. All rights reserved. Reproduction, modification, translation or commercial use requires prior written permission from the author.</p>
+  <h3 id="free-to-read-independent-non-profit-no-advertising-or-sponsored-content">Free to read. Independent. Non-profit. No advertising or sponsored content.</h3>
+</div></section>
+<section class="article-library" aria-labelledby="article-index">
+  <h2 id="article-index">Article Index</h2>
+  <div id="readme-article-index">
+{% capture series_readme %}{% include_relative README.md %}{% endcapture %}
+{% assign article_index = series_readme | split: '## Article Index' | last %}
+{{ article_index | replace: 'NOise Metrics', 'Noise Metrics' | markdownify }}
+  </div>
+</section>
+</section>
+</main>
+<footer class="wrap">Making Sense of Sound · Chris Wang</footer>
+<script>
+function renderArticleIndex(source) {
+  const phases = [];
+  const notes = [];
+  let phase;
+  for (const node of [...source.children]) {
+    const match = node.matches('h3') && node.textContent.match(/^Phase\s+(\d+)\b/i);
+    if (match) {
+      phase = { heading: node, number: Number(match[1]), content: [], published: false };
+      phases.push(phase);
+    } else if (phase && node.matches('ul, ol')) {
+      phase.content.push(node);
+      phase.published ||= [...node.querySelectorAll('a[href]')].some(link => /^https?:$/.test(link.protocol));
+    } else {
+      notes.push(node);
+    }
+  }
+  if (!phases.length) return;
+  const make = (tag, className) => {
+    const element = document.createElement(tag);
+    element.className = className;
+    return element;
+  };
+  const layout = make('div', 'index-layout');
+  const nav = make('nav', 'index-nav');
+  nav.setAttribute('aria-label', 'Published article sections');
+  const label = document.createElement('p');
+  label.textContent = 'Browse by topic';
+  nav.append(label);
+  const entries = make('div', 'index-entries');
+  const roadmap = make('details', 'index-roadmap');
+  const summary = document.createElement('summary');
+  const topics = { 1: 'Sound & hearing', 7: 'Building & room acoustics', 8: 'Environment & soundscape', 10: 'Case studies' };
+  const pending = [];
+  roadmap.append(summary);
+  for (const item of phases) {
+    const group = make('div', 'phase');
+    group.append(item.heading, ...item.content);
+    if (item.published) {
+      const link = document.createElement('a');
+      link.href = '#' + item.heading.id;
+      link.textContent = topics[item.number] || item.heading.textContent.replace(/^Phase\s+\d+\s+/i, '').trim();
+      nav.append(link);
+      entries.append(group);
+    } else {
+      pending.push(item.number);
+      roadmap.append(group);
+    }
+  }
+  if (pending.length) {
+    const consecutive = pending.length > 1 && pending.every((n, i) => n === pending[0] + i);
+    const text = pending.length === 1 ? 'Phase ' + pending[0] : 'Phases ' + (consecutive ? pending[0] + '–' + pending.at(-1) : pending.join(', '));
+    summary.textContent = text + ' · Topics without published articles';
+    entries.append(roadmap);
+  }
+  entries.append(...notes);
+  layout.append(nav, entries);
+  source.replaceWith(layout);
+  function revealAnchor() {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (!target) return;
+    const parent = target.closest('details');
+    if (parent) parent.open = true;
+    target.scrollIntoView();
+  }
+  window.addEventListener('hashchange', revealAnchor);
+  if (window.location.hash) requestAnimationFrame(revealAnchor);
+}
+renderArticleIndex(document.querySelector('#readme-article-index'));
+const articleLinks = [...document.querySelectorAll('.archive a[href]')];
+const featured = document.querySelector('#featured');
+for (const card of featured.querySelectorAll('[data-match]')) {
+  const source = articleLinks.find(link => link.href.includes(card.dataset.match));
+  if (!source) {
+    card.hidden = true;
+    continue;
+  }
+  const link = source.cloneNode(true);
+  link.textContent = 'Read on LinkedIn';
+  link.setAttribute('aria-label', 'Read on LinkedIn: ' + source.textContent.trim());
+  card.append(link);
+  featured.hidden = false;
+}
+for (const item of document.querySelectorAll('.archive li')) {
+  if (!item.children.length && /^\s*\[EP[^\]]+\]\s*$/i.test(item.textContent)) item.hidden = true;
+}
+const canvas = document.querySelector('.hero canvas');
+const context = canvas.getContext('2d');
+function drawWaveform() {
+  if (!context) return;
+  const { width, height } = canvas.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = Math.round(width * dpr);
+  canvas.height = Math.round(height * dpr);
+  context.scale(dpr, dpr);
+  for (const [offset, opacity] of [[0, .8], [.55, .35], [1.1, .22]]) {
+    context.strokeStyle = 'rgba(143, 213, 178, ' + opacity + ')';
+    context.lineWidth = 1.2;
+    context.beginPath();
+    for (let x = 0; x <= width; x += 2) {
+      const t = x / width;
+      const envelope = Math.sin(Math.PI * t) ** 2;
+      const y = height * (.5 + envelope * (.16 * Math.sin(t * 34 + offset) + .07 * Math.sin(t * 94 + offset)));
+      if (x === 0) context.moveTo(x, y);
+      else context.lineTo(x, y);
+    }
+    context.stroke();
+  }
+}
+drawWaveform();
+window.addEventListener('resize', drawWaveform);
+</script>
+</body></html>
