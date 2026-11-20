@@ -171,31 +171,38 @@ function renderArticleIndex(source) {
   label.textContent = 'Browse by topic';
   nav.append(label);
   const entries = make('div', 'index-entries');
-  const roadmap = make('details', 'index-roadmap');
-  const summary = document.createElement('summary');
   const topics = { 1: 'Sound & hearing', 7: 'Building & room acoustics', 8: 'Environment & soundscape', 10: 'Case studies' };
-  const pending = [];
-  roadmap.append(summary);
+  let roadmap;
+  let pending = [];
+  function finishRoadmap() {
+    if (!roadmap) return;
+    const consecutive = pending.length > 1 && pending.every((n, i) => n === pending[0] + i);
+    const text = pending.length === 1 ? 'Phase ' + pending[0] : 'Phases ' + (consecutive ? pending[0] + '–' + pending.at(-1) : pending.join(', '));
+    roadmap.firstElementChild.textContent = text + ' · Topics without published articles';
+    entries.append(roadmap);
+    roadmap = undefined;
+    pending = [];
+  }
   for (const item of phases) {
     const group = make('div', 'phase');
     group.append(item.heading, ...item.content);
     if (item.published) {
+      finishRoadmap();
       const link = document.createElement('a');
       link.href = '#' + item.heading.id;
       link.textContent = topics[item.number] || item.heading.textContent.replace(/^Phase\s+\d+\s+/i, '').trim();
       nav.append(link);
       entries.append(group);
     } else {
+      if (!roadmap) {
+        roadmap = make('details', 'index-roadmap');
+        roadmap.append(document.createElement('summary'));
+      }
       pending.push(item.number);
       roadmap.append(group);
     }
   }
-  if (pending.length) {
-    const consecutive = pending.length > 1 && pending.every((n, i) => n === pending[0] + i);
-    const text = pending.length === 1 ? 'Phase ' + pending[0] : 'Phases ' + (consecutive ? pending[0] + '–' + pending.at(-1) : pending.join(', '));
-    summary.textContent = text + ' · Topics without published articles';
-    entries.append(roadmap);
-  }
+  finishRoadmap();
   entries.append(...notes);
   layout.append(nav, entries);
   source.replaceWith(layout);
