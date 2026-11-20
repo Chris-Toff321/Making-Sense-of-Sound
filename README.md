@@ -20,20 +20,32 @@ Original writing and illustrations are copyright © 2026 Xujian Wang. All rights
 
 ## Article Index
 
-### Phase 1 The Receiver: Human Perception and Psychoacoustics
+### Phase 1 Sound & Hearing Fundamentals
 - [EP1, Human Perception 20 Hz-20 kHz is not the Whole Story](https://www.linkedin.com/pulse/making-sense-sound-acoustics-nvh-human-perception-20-20-chris-wang-h48dc/?trackingId=o9XzuQqKEzsr0zWKfAP4cA%3D%3D)
 - [EP2, Equal loudness & A-weighting: What are we Really Measuring?](https://www.linkedin.com/pulse/making-sense-sound-acoustics-nvh-equal-loudness-a-weighting-wang-eq5zc/?trackingId=yei62LqdBxiFZB50SjhfoA%3D%3D)
 - [EP3, SPL, Sound power & intensity Three faces of the same source]
 - [EP4, Airborne and Structure-borne: Two Differnet Transmission Worlds](https://www.linkedin.com/pulse/making-sense-sound-acoustics-nvh-airborne-two-different-chris-wang-pesxc/?trackingId=fSRXxqx8pP9yL8N6WpSTgQ%3D%3D)
 - [EP4. Case Share: Decoding EV Powertrain Airborne and Structure-borne Contribution Based on TPA](https://www.linkedin.com/pulse/case-share-decoding-ev-powertrain-airborne-based-tpa-chris-wang-9os3c/?trackingId=B4e2ow8is8b%2BI65wzWgqPg%3D%3D)
+
+### Phase 2 Signal Processing and Data Integrity
+
+### Phase 3 Acoustic Measurement and NOise Metrics
+
 ### Phase 4 The Space: Applied Acoustic Systems and Lived Context
-#### 4.1 The Building and Room acoustics
+
+### Phase 5 Modal Testing and Analysis
+
+### Phase 6 Transfer Path Analysis
+
+### Phase 7 Building and Room Acoustics
 - [EP5, Airborne vs.Structure-Borne: How Do We Quantify by STC and IIC](https://www.linkedin.com/pulse/making-sense-sound-acoustics-nvh-airborne-vs-how-do-we-chris-wang-78pfc/?trackingId=%2FLRPLNG6Qvp7JM7mJ%2Fa4IA%3D%3D)
 - [EP6.1, Lab vs. Field Measurements, Part 1: Why Airborne Sound Rating Change After Installation](https://www.linkedin.com/in/chris-w-7b297817b/recent-activity/all/)
 - [EP6.2, Lab vs. Field Measurements, Part2: Impact Sound—— The Installed Structure Matters Even More](https://www.linkedin.com/pulse/ep62-lab-vs-field-measurements-part-2-impact-soundthe-chris-wang-96rrc/?trackingId=Rh9jirHvC3rAVZCkn%2Fy6Jw%3D%3D)
-### Phase 6 Environment & Soundscape
+
+### Phase 8 Environmental Acoustics & Soundscape
 - [EP80.1 What Does the World Sound Like](https://www.linkedin.com/pulse/ep801-what-does-world-sound-like-chris-wang-ocifc/)
-## Case Shared:
+
+### Phase 10 Case-Shared and Study:
 - [EV Road Noise decoding and Root-cause Analysis](https://www.linkedin.com/posts/activity-7396835365199695872-kegi?utm_source=share&utm_medium=member_desktop&rcm=ACoAACquDXYB7y4aAxPGFD2qoy9RMuqHkkyqtGY)
 - [Excavator Multi-Source Noise Contribution Assessment](https://www.linkedin.com/posts/activity-7419773171836514304-K3Gu?utm_source=share&utm_medium=member_desktop&rcm=ACoAACquDXYB7y4aAxPGFD2qoy9RMuqHkkyqtGY)
 - [Experiemental Modal Analysis of an Eletric Motor Assembly](https://www.linkedin.com/pulse/experimental-modal-analysis-electric-motor-assembly-xujian-wang-r8dec/?trackingId=kRkwY2QNcQqiEYaGdTcmeQ%3D%3D)
